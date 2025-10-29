@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../common/Navbar';
-import axios from '../../services/api';
+import axios from "../services/api";
+
 
 const AddMembership = () => {
   const navigate = useNavigate();

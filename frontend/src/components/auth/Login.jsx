@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // <-- Added Link
 import { useAuth } from '../../context/AuthContext';
 import '../../App.css';
 
@@ -26,7 +26,6 @@ const Login = () => {
     setLoading(false);
 
     if (result.success) {
-      // Redirect based on user role after successful login
       setTimeout(() => {
         if (isAdmin) {
           navigate('/admin/home');
@@ -75,9 +74,11 @@ const Login = () => {
           </button>
         </form>
 
-        <div className="info-text">
-          <p>Default Admin Credentials: admin / admin123</p>
-          <p>Default User Credentials: user / user123</p>
+      
+       
+
+        <div className="register-link">
+          <p>Don't have an account? <Link to="/register">Register here</Link></p>
         </div>
       </div>
     </div>
